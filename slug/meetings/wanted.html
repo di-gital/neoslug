@@ -3,8 +3,8 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../neoslug.css">
-  <link rel="favicon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../resources/neoslug.css">
+  <link rel="favicon" href=IMAGE_DIR/favicon.ico>
   <title>Rutgers SLUG</title>
 </head>
 <body>
@@ -13,18 +13,21 @@
       <img src="../images/mainbanner.jpg" alt="SLUG: Rutgers University Student Linux User Group"></img>
     </h1>
     <hr />
+
     <div style="font-size:85%;">
       <p><strong>Our next meeting is:</strong>
-	not determined yet.</p>
+	Monday, November 6, 2023.</p>
     </div>
     <nav class="navbar">
         <div></div>
  	<div><a href="../index.html">Home</a></div>
-	<div><a href="./index.html">Meetings</a></div>
+	<div><a href="../meetings/index.html">Meetings</a></div>
 	<div><a href="../links.html">Links</a></div>
 	<div></div>
     </nav>
-</header>
+  </header>
+
+ 
 <body>
   <div>
     <h1>Topics for Future Meetings</h1>
@@ -47,7 +50,9 @@
       <p>At the heart of almost every Linux distribution is
       a <em>package manager</em>, a mean by which users can easily
       obtain software and data usually provided by the maintainers of
-      the distribution.</p>
+      the distribution. These centralized sources, in addition to the
+      freedom to choose alterantives, are for some the largest draw to
+      the Linux family of operating system.</p>
     </div>
     <div>
       <h3>Shell Scripting</h3>
@@ -76,6 +81,17 @@
       System</a> is used for much legacy open-source software.
     </div>
     <div>
+      <h3>Desktop Customization</h3>
+      <p>There is a dizzying number of different graphical user
+	interfaces available on free operating systems. While all aim
+	to be as user-friendly as possible, each individual project
+	has a different to creating something that its users will
+	prefer to use. User interfaces on Linux are on spectrum from
+	the highly-integrated GNOME and KDE that will be approachable
+	for users of any experience, to the specialized "minimalist"
+	user interfaces for advanced users.</p>
+    </div>
+    <div>
       <h3>Typesetting tools</h3>
       <p>Outside of what-you-see-is-what-you-get word processing
 	software lies a rich set of tools for producing documents
@@ -90,91 +106,247 @@
   <div>
     <h2>Software Engineering</h2>
     <div>
-      <h3>IEEE Portable Operating System (POSIX)</h3>
+      <h3>IEEE Portable Operating System Interface (POSIX)</h3>
+      <p>In the 1980s, the US government set to create a standard that
+      computure operating systems would have to follow to be eligible
+      for its use. A committee at IEEE quickly standardized around the
+      popular
+	<a href="https://en.wikipedia.org/wiki/System_V_Unix">
+	  System V Unix</a> as a base for the specification. While
+      POSIX was not particularly successful in its goals for
+      government contracts, it found new life as a standard that all
+      Unix-like operating systems could use for portability between
+      them.</p>
     </div>
     <div>
       <h3>Rust for Linux</h3>
+      <p>Rust is an increasingly-popular systems programming that
+      emphasizes memory safety. In 2022, the Linux kernel began to
+      allow developers to submit code in Rust.</p>
     </div>
     <div>
       <h3>The X Window System</h3>
+      <p>The X Windowing System is the standard graphical user
+      interface protocol for Unix-like systems. As a server, it has
+      functionalities beyond serving a single user: it may forward the
+      graphical output of a program over an internet, as was common in
+      many organizations that could not afford dedicated workstations.
+      It may also be used on operating systems that are not Unix-like
+      at all, also being the standard graphical user interface
+      protocol on OpenVMS.</p>
     </div>
     <div>
       <h3>The Wayland Protocol</h3>
+      <p>X11 developers at Freedesktop.org saw the standard protocol
+      as having inherent security flaws, such as the ability for a
+      program to know the state of all others in the same X
+      environment. Furthermore, looking to modernize the way users
+      interact with their environments, the new Wayland protocol was
+      designed to take advantage of hardware graphics acceleration
+      universally present on modern PCs, tablets, and
+      smartphones.</p>
     </div>
     <div>
       <h3>μCLinux</h3>
+      <p>Maintained fork of the Linux kernel designed to run
+      on microcontrollers without a memory-management unit.</p>
     </div>
     <div>
       <h3>SELinux</h3>
+      <p>Security-Enhanced Linux. It is the default kernel on the Red
+      Hat family of distributions, which includes Fedora and CentOS
+      Stream.</p>
     </div>
     <div>
       <h3>Monolithic Kernels versus Microkernels</h3>
+      <p>Perhaps the single largest choice an operating system
+      designer can make is that between a monolithic kernel, which
+      holds most the core functionality of the operating system within
+      the kernel, or as a microkernel, which is as small as possible
+      and has external software in userspace perform most of the
+      operating system's duties. In the first year of the Linux
+      kernel's development, this was a point in controversy: Andrew
+      Tanenbaum, the creator of Minix, thought the monolithic kernel
+      design was outdated even in 1991, while Linus Torvalds held to
+      his opinion that a monolithic kernel was more practical for
+      production use.</p>
     </div>
   </div>
   <div>
     <h2>System Administration</h2>
     <div>
       <h3>Package Management with Nix</h3>
+      <p>Nix is a package manager that is configured by a
+      functionalprogramming language also called Nix.</p>
     </div>
     <div>
       <h3>Virtual Machines</h3>
+      <p>A virtual machine is a class of emulator that is expected to
+      replicate all the functionalites and behavior of a physical
+      machine in real time. They are particularly useful for testing
+      and debugging system software and software that runs on an
+      operating system not native to the host.</p>
     </div>
     <div>
       <h3>Dockers</h3>
     </div>
     <div>
       <h3>Choosing a Shell</h3>
+      <p>There are several different shells, with each operating
+      system seeming to have a different default. On just about every
+      system, there exists a limited POSIX-complient shell useful for
+      basic tasks that require portability, but for interactive use,
+      BASH, ZSH, and FISH are more common. Users of older systems may
+      also be familiar with Korn shell.</p>
     </div>
     <div>
       <h3>Securing a Unix System</h3>
+      <p>In production and at home, system administrators have become
+      increasingly aware of the security threats that a system may
+      face when exposed to people inside and outside the organization
+      it belongs to. There is a list of standard techniques and
+      preferred solutions to mitigate security risks.</p>
     </div>
     <div>
       <h3>PGP Encryption</h3>
+      <p>Pretty Good Protection is a common standard for encryption on
+      machines running a Unix-like operating system. GNU Privacy Guard
+      is one implementation of it. In particular, this workshop or
+      presentation should focus upon encrypting e-mail with it.</p>
     </div>
     <div>
       <h3>Networked File Systems</h3>
+      <p>Users increasingly want to access their data remotely. From
+      the 1980s, Sun Microsystems, a vendor of Unix workstations, had
+      created the Network File System standard for multiple devices to
+      access the same storage over a network. For Windows and OS/2
+      users, Common Internet File System (CIFS), formely know as
+      Server Message Block, is the standard protocol to access
+      information over an internet. Both have been implemented as
+      servers within the Linux kernel.</p>
     </div>
     <div>
       <h3>Compiling a Linux Kernel</h3>
+      <p>For many users of Linux-based operating systems, recompiling
+      one's own kernel is a rite of passage to becoming an advanced
+      user. By understanding the features and options that the kernel
+      has, users may enable functionality they need or disable
+      functionality they do not need to save space and improve
+      performance, especially during startup. On modern systems, the
+      task of configuring and compiling a Linux kernel is not
+      especially involved, but contains many options that may not seem
+      especially clear even with the included documentation.</p>
     </div>
     <div>
       <h3>Writing Manual Pages</h3>
+      <p>Documentation is often overlooked by developers, especially
+      in fast-moving projects, but is the user's main way of
+      understanding what a particular protocol or piece of software
+      does. The on-line manual page format has been relatively
+      standard and straightforward since its inception in the 1970s,
+      and will be second nature to those familar with
+      the <tt>troff</tt> typesetting utility.</p>
     </div>
     <div>
-      <h3>Multi-disk Filesystems</h3>
-    </div>
-    <div>
-      <h3>The Operation of an Init System</h3>
+      <h3>Volume Managers</h3>
+      <p>When computer systems grow large enough, they may include
+      multiple hard drives. To increase performance, back up data, and
+      create a seamless user experience, volume management software
+      can make an operating system view multiple disks as a single
+      large volume. On Linux-based
+      systems, <a href="https://www.sourceware.org/lvm2/">Logical
+      Volume Management</a> is common,
+      while <a href="https://en.wikipedia.org/wiki/ZFS">ZFS</a> is
+      common on Linux, BSD, and Solaris operating systems, especially
+      in enterprise use or in
+      <a href="https://en.wikipedia.org/wiki/Network-attached_storage">NAS</a>
+      installations.</p>
     </div>
     <div>
       <h3>SystemD</h3>
+      <p>SystemD is the most controversal part of modern GNU/Linux
+      systems. Seeking to do more than traditional init systems, it is
+      seen as overly-complicated and difficult to maintain, and in
+      general at odds with the principles that make the Unix-like
+      family of operating systems attractive.</p>
     </div>
   </div>
   <div>
     <h2>Non-Linux Operating Systems</h2>
     <div>
       <h3>Berkeley Software Distribution (BSD)</h3>
+      <p>In the 1980s, the University of California, Berkeley gained
+      access to the Unix source. Associates of the university modified
+      the sources and distributed them under a special license that
+      allowed people to distribute the software nearly without
+      restriction. These modified sources later became foundational to
+      several commercial Unix variants. In the late 1980s, a company
+      looking to commercialize the product called BSDi was founded.
+      Although the vast majority of the operating system was free
+      software derived from the BSD project, six files relating to the
+      networking code that originated from AT&amp;T were still present
+      within their operating system's source code. AT&amp;T promptly
+      sued BSDi, but the court ruled in favor of the startup's favor.
+      This operating system, known as 386BSD, became the base for the
+      subsequent free BSD projects which are active thirty years
+      later, most notably FreeBSD, NetBSD, and OpenBSD.</p>
     </div>
     <div>
-      <h3>Windows Subsystem for Linux</h3>
+      <h3>Windows Subsystem for Linux (WSL)</h3>
+      <p>As a replacement for the previous Windows NT "personality"
+      that could run POSIX programs and Windows Services for Unix,
+      Microsoft has bundled Linux compatibility into Windows starting
+      with Windows 10. Windows Subsystem for Linux 2 (WSL2) uses a
+      complete Linux kernel and has compatibility with graphical
+      programs on the Windows API.</p>
     </div>
     <div>
       <h3>Plan 9 From Bell labs</h3>
+      <p>Named for the cult classic Ed Wood film
+	<a href="https://www.imdb.com/title/tt0052077/">Plan 9 From
+	Outer Space</a>, this operating system was created by the
+	original developers of Unix as a continuation of several
+	enents of its design design philosophy -- simplicity,
+	maintainability, and "everything is a file" -- while adding
+	support for new features such as distributed computing and
+	graphical user interfaces.</p>
     </div>
     <div>
       <h3>Unix Workstations</h3>
+      <p>Before GNU/Linux became the most popular Unix-like operating
+      system for software development, servers, and scientific
+      computing, and before the Personal Computer platform was seen as
+      capable enough for these applications, vendors of specialized
+      high-end personal computers each offered their own variant of
+      Unix, usually based on Version 7 Unix, System V Unix, or BSD.
     </div>
   </div>
   <div>
     <h2>Social Issues in Computing</h2>
     <div>
       <h3>Free Software Licenses</h3>
+      <p>In the past decade, releasing one's own software as
+       open-source has become the standard practice. Most people who
+       release open-source software prefer to give a higher degree of
+       freedom to the software's users: they may choose a free
+       software license that enables this. Choosing between the myriad
+       ready-to-use licenses or writing a new license is a point of
+       concern for many developers who may not understand the rights
+       they are or are not granting their software's users.</p>
     </div>
     <div>
       <h3>The Intel Management Engine and Free BIOSes</h3>
+      <p>The BIOS (basic input/output system) is the last piece of
+      common computer software that does not have a standard free
+      implementation. The Intel Management engine is a small CPU core
+      present on the motherboard's chipset that currently has an
+      unknown purpose, but runs a fully-featured multitasking
+      operating system and has complete access to the computer's
+      hardware, including the memory, disks, and network interfaces. A
+      common goal of free BIOS projects is to disable this device.</p>
     </div>
   </div>
-  <br /
+  <br />
   <div>
     <p>This page is maintained
     by <a href="mailto:njd131@scarletmail.rutgers.edu">Nicholas Di
@@ -183,22 +355,21 @@
   </div>
 
 </body>
-
-
-  <footer>
+<footer>
 <hr />
   <a href="https://www.freebsd.org">
-    <img src="../images/freebsd.gif" alt="Powered by FreeBSD.">
+    <img src=../images/freebsd.gif alt="Powered by FreeBSD.">
   </a>
   <a href="https://lynx.invisible-island.net">
-    <img src="../images/lynx.gif" width="88" height="31"
+    <img src=../images/lynx.gif width="88" height="31"
     alt="Lynx-friendly."></img>
   </a>
   <br />
   <a href="https://www.rutgers.edu">
-    <img src="../images/rutlogo.png" alt="Rutgers, The State University of New Jersey">
+    <img src=../images/rutlogo.png" alt="Rutgers, The State University of New Jersey">
   </a>
 </img>
 </footer>
 </body>
-</html>  
+</html>
+  
