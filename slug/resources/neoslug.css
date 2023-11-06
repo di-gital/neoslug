@@ -13,7 +13,7 @@ h1 {
     text-align: center;
 }
 
-.navbar {
+nav {
     overflow: hidden;
     background-color: #8fbaef;
     text-align: center;
@@ -21,7 +21,7 @@ h1 {
     grid-template-columns: 1fr max-content max-content max-content 1fr;
 }
 
-.navbar a  {
+nav a {
   float: left;
   padding: 4px 10px;
   font-weight: bold;

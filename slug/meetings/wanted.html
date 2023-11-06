@@ -19,7 +19,7 @@
       <p><strong>Our next meeting is:</strong>
 	Monday, November 6, 2023.</p>
     </div>
-    <nav class="navbar">
+    <nav>
         <div></div>
  	<div><a href="../index.html">Home</a></div>
 	<div><a href="../meetings/index.html">Meetings</a></div>
@@ -53,7 +53,10 @@
       obtain software and data usually provided by the maintainers of
       the distribution. These centralized sources, in addition to the
       freedom to choose alterantives, are for some the largest draw to
-      the Linux family of operating system.</p>
+      the Linux family of operating systems. The basic use of most of
+      them are mostly quite similar, but some differences in the
+      philosophies of the creators becomes apparent in some of the
+      nuances of their operation.</p>
     </div>
     <div>
       <h3>Shell Scripting</h3>
@@ -64,22 +67,34 @@
       for bugs to weaken it and by tools not having to reimplement
       each other. Indeed, it made more sense to the creators of the
       Unix operating system, for which Linux can be considered an
-      open-source heir to, to connect programs together to
-      achieve a particular task. <em>Shell scripting</em> is the
-      standard way to do this, and involves the sequential execution
-      of programs and the passing of data between these programs.</p>
+      open-source heir to, to connect programs together to achieve a
+      particular task. <em>Shell scripting</em> is the standard way to
+      do this, and involves the sequential execution of several
+      command-line programs as one larger program. programs. This is a
+      critical skill to have for administrative tasks on any Unix-like
+      system, and the skills discussed may even be transferrable to
+      operating systems not related to the Unix-like family, like
+      Windows and VMS.</p>
     </div>
     <div>
       <h3>Version Control Systems</h3>
       <p>Almost every software project today is managed by
       a <em>version control system</em>, a piece of software that logs
       changes to a directory.
-      Today, <a href="https://git-scm.com">Git</a> is considered to be
-      the most popular version control system,
-      though <a href="https://subversion.apache.org">Subversion</a> is
-      a popular alternative
+      Today, <a href="https://git-scm.com">Git</a> is favored by
+      developers the,
+      but <a href="https://subversion.apache.org">Subversion</a> is a
+      popular alternative
       and <a href="https://cvs.nongnu.org">Concurrent Version
-      System</a> is used for much legacy open-source software.
+      System</a> is used for much legacy open-source software. All of
+      these enable anyone who needs to share a changing body of files
+      to keep track of these changes in a standardized way and to have
+      a standard protocol to have people other than the original
+      creator contribute to a project. Sites such
+      as <a href="https://github.com">GitHub</a>
+      and <a href="https://gitlab.com">GitLab</a> are popular
+      centralized destinations to place one's own repostitories, but
+      repositories may be shared from any location.</p>
     </div>
     <div>
       <h3>Desktop Customization</h3>
@@ -88,9 +103,11 @@
 	to be as user-friendly as possible, each individual project
 	has a different to creating something that its users will
 	prefer to use. User interfaces on Linux are on spectrum from
-	the highly-integrated GNOME and KDE that will be approachable
-	for users of any experience, to the specialized "minimalist"
-	user interfaces for advanced users.</p>
+	the
+	highly-integrated <a href="https://www.gnome.org">GNOME</a>
+	and <a href="https://kde.org">KDE</a> that will be
+	approachable for users of any experience, to more specialized
+	user interfaces intended for advanced users.</p>
     </div>
     <div>
       <h3>Typesetting tools</h3>
@@ -123,7 +140,12 @@
       <h3>Rust for Linux</h3>
       <p>Rust is an increasingly-popular systems programming that
       emphasizes memory safety. In 2022, the Linux kernel began to
-      allow developers to submit code in Rust.</p>
+      allow developers to submit code in Rust.
+      Currently, <a href="https://asahilinux.org/about/">Asahi
+      Linux</a> is the most popular distribution which uses this
+      functionality, which is used in its case in the distribution's
+      custom fork of the kernel to provide compatibility with the Apple
+      Silicon series of systems on chips.</p>
     </div>
     <div>
       <h3>The X Window System</h3>
@@ -134,7 +156,8 @@
       many organizations that could not afford dedicated workstations.
       It may also be used on operating systems that are not Unix-like
       at all, also being the standard graphical user interface
-      protocol on OpenVMS.</p>
+      protocol on OpenVMS. Windows and macOS may also use X programs
+      through various compatibility layers.</p>
     </div>
     <div>
       <h3>The Wayland Protocol</h3>
@@ -142,21 +165,25 @@
       as having inherent security flaws, such as the ability for a
       program to know the state of all others in the same X
       environment. Furthermore, looking to modernize the way users
-      interact with their environments, the new Wayland protocol was
+      interact with their environments, then new Wayland protocol was
       designed to take advantage of hardware graphics acceleration
       universally present on modern PCs, tablets, and
       smartphones.</p>
     </div>
     <div>
       <h3>μCLinux</h3>
-      <p>Maintained fork of the Linux kernel designed to run
-      on microcontrollers without a memory-management unit.</p>
+      <p>Maintained fork of the Linux kernel designed to run on
+      microcontrollers without a
+      <a href="https://en.wikipedia.org/wiki/Memory_management_unit">memory
+      management unit</a> (MMU). This is the most common way to get
+      Linux-based operating systems on embedded devices like the Apple
+      iPod or Nintendo DS, which do not have have MMUs.</p>
     </div>
     <div>
       <h3>SELinux</h3>
       <p>Security-Enhanced Linux. It is the default kernel on the Red
-      Hat family of distributions, which includes Fedora and CentOS
-      Stream.</p>
+      Hat family of distributions, which includes Red Hat Enterprise
+      Linux, Fedora, and CentOS Stream.</p>
     </div>
     <div>
       <h3>Monolithic Kernels versus Microkernels</h3>
@@ -167,10 +194,16 @@
       and has external software in userspace perform most of the
       operating system's duties. In the first year of the Linux
       kernel's development, this was a point in controversy: Andrew
-      Tanenbaum, the creator of Minix, thought the monolithic kernel
-      design was outdated even in 1991, while Linus Torvalds held to
-      his opinion that a monolithic kernel was more practical for
-      production use.</p>
+      Tanenbaum, the creator
+      of <a href="https://en.wikipedia.org/wiki/Minix">Minix</a>,
+      thought the monolithic kernel design was outdated even in 1991,
+      while Linus Torvalds held to his opinion that a monolithic
+      kernel was more practical for production use. Some operating
+      systems, such as macOS with
+      the <a href="https://en.wikipedia.org/wiki/XNU">XNU kernel</a>
+      and Windows with the NT kernel, may try to bridge the gap
+      between these two designs by having a microkernel and a core set
+      of servers within kernel space.</p>
     </div>
   </div>
   <div>
@@ -178,7 +211,7 @@
     <div>
       <h3>Package Management with Nix</h3>
       <p>Nix is a package manager that is configured by a
-      functionalprogramming language also called Nix.</p>
+      functional programming language also called Nix.</p>
     </div>
     <div>
       <h3>Virtual Machines</h3>
@@ -189,7 +222,10 @@
       operating system not native to the host.</p>
     </div>
     <div>
-      <h3>Dockers</h3>
+      <h3>Containers</h3>
+      <p>For developers and system administrators
+      alike, <em>containers</em> provide a virtualized system to test
+      and run specific programs outside of host operating system.</p>
     </div>
     <div>
       <h3>Choosing a Shell</h3>
@@ -197,8 +233,10 @@
       system seeming to have a different default. On just about every
       system, there exists a limited POSIX-complient shell useful for
       basic tasks that require portability, but for interactive use,
-      BASH, ZSH, and FISH are more common. Users of older systems may
-      also be familiar with Korn shell.</p>
+      <a href="https://www.gnu.org/software/bash/">BASH</a>, <a href="https://www.zsh.org">ZSH</a>,
+      and <a href="https://fishshell.com/">FISH</a> are more common.
+      Users of older systems may also be familiar with the Korn
+      shell.</p>
     </div>
     <div>
       <h3>Securing a Unix System</h3>
@@ -213,18 +251,25 @@
       <p>Pretty Good Protection is a common standard for encryption on
       machines running a Unix-like operating system. GNU Privacy Guard
       is one implementation of it. In particular, this workshop or
-      presentation should focus upon encrypting e-mail with it.</p>
+      presentation should focus upon encrypting e-mail with it, and
+      can be tied together with a potential keysharing event.</p>
     </div>
     <div>
       <h3>Networked File Systems</h3>
       <p>Users increasingly want to access their data remotely. From
-      the 1980s, Sun Microsystems, a vendor of Unix workstations, had
-      created the Network File System standard for multiple devices to
-      access the same storage over a network. For Windows and OS/2
-      users, Common Internet File System (CIFS), formely know as
-      Server Message Block, is the standard protocol to access
-      information over an internet. Both have been implemented as
-      servers within the Linux kernel.</p>
+      the
+      1980s, <a href="https://en.wikipedia.org/wiki/Sun_Microsystems">Sun
+      Microsystems</a>, a vendor of Unix workstations, had created the
+      <a href="https://en.wikipedia.org/wiki/Network_File_System">Network
+      File System</a> standard for multiple devices to access the same
+      storage over a network. For Windows and OS/2
+      users, <a href="https://en.wikipedia.org/wiki/Common_Internet_File_System">Common
+      Internet File System</a> (CIFS), formely known as Server Message
+      Block, is the standard protocol to access information over an
+      internet. Due to their popularity, both have been implemented as
+      servers within the mainline Linux kernel despite the security
+      risks they may impose. Users of Unix-like operating systems may
+      run <a href="https://www.samba.org">Samba</a> to use CIFS.</p>
     </div>
     <div>
       <h3>Compiling a Linux Kernel</h3>
@@ -265,11 +310,20 @@
     </div>
     <div>
       <h3>SystemD</h3>
-      <p>SystemD is the most controversal part of modern GNU/Linux
-      systems. Seeking to do more than traditional init systems, it is
-      seen as overly-complicated and difficult to maintain, and in
-      general at odds with the principles that make the Unix-like
-      family of operating systems attractive.</p>
+      <p>Most popular modern Linux distributions use the init system
+	SystemD. It seeks to improve startup times, streamline system
+	administration, and make running multiple instances of the
+	same <a href="https://en.wikipedia.org/wiki/Daemon_(computing)">daemon</a>
+	concurrently a simple task. SystemD is also the most
+	controversal part of modern GNU/Linux systems. Seeking to do
+	more than traditional init systems, it is seen as
+	overly-complicated and difficult to maintain, and in general
+	at odds with the principles that make the Unix-like family of
+	operating systems attractive. Furthermore, SystemD is not a
+	portable program because of its heavy use of the Linux kernel
+	API as opposed to POSIX, and may impose vendor lock-in to
+	GNU/Linux by having popular software like GNOME need it as a
+	dependency.</p>
     </div>
   </div>
   <div>
@@ -290,7 +344,9 @@
       sued BSDi, but the court ruled in favor of the startup's favor.
       This operating system, known as 386BSD, became the base for the
       subsequent free BSD projects which are active thirty years
-      later, most notably FreeBSD, NetBSD, and OpenBSD.</p>
+      later, most
+      notably <a href="https://www.freebsd.org">FreeBSD</a>, <a href="https://netbsd.org">NetBSD</a>,
+      and <a href="https://www.openbsd.org">OpenBSD</a>.</p>
     </div>
     <div>
       <h3>Windows Subsystem for Linux (WSL)</h3>
@@ -306,11 +362,14 @@
       <p>Named for the cult classic Ed Wood film
 	<a href="https://www.imdb.com/title/tt0052077/">Plan 9 From
 	Outer Space</a>, this operating system was created by the
-	original developers of Unix as a continuation of several
-	enents of its design design philosophy -- simplicity,
-	maintainability, and "everything is a file" -- while adding
-	support for new features such as distributed computing and
-	graphical user interfaces.</p>
+	original developers of Unix at Bell Labs as a continuation and
+	evolution of the Unix philosophy — simplicity,
+	maintainability, and "everything is a file" — while reducing
+	the amount of work required to run distributed programs and
+	graphical user interfaces. It is the origin of
+	the <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>
+	standard and <a href="http://man.cat-v.org/plan_9/5/intro">9P
+	protocol</a>.</p>
     </div>
     <div>
       <h3>Unix Workstations</h3>
@@ -320,6 +379,21 @@
       capable enough for these applications, vendors of specialized
       high-end personal computers each offered their own variant of
       Unix, usually based on Version 7 Unix, System V Unix, or BSD.
+      They also often had specialized microprocessors,
+      like <a href="https://en.wikipedia.org/wiki/SPARC">SPARC</a>, <a href="https://en.wikipedia.org/wiki/Power_ISA">POWER
+      and
+      PowerPC</a>, <a href="https://en.wikipedia.org/wiki/PA-RISC">PA-RISC</a>, <a href="https://en.wikipedia.org/wiki/DEC_Alpha">Alpha</a>,
+      and <a href="https://en.wikipedia.org/wiki/Itanium">Itanium</a>.
+      While this class of hardware was largely rendered obsolete by
+      64-bit x86 workstations, the software that ran on them survives
+      in the form
+      of <a href="https://www.ibm.com/products/aix">AIX</a> from
+      IBM, <a href="https://www.hpe.com/us/en/servers/hp-ux.html">HP-UX</a>
+      from HP, <a href="https://www.oracle.com/solaris">Solaris</a>
+      from Oracle (formerly by Sun),
+      and <a href="https://www.apple.com/macos/">macOS</a> from Apple
+      (derived
+      from <a href="https://en.wikipedia.org/wiki/NeXTSTEP">NeXT</a>).</p>
     </div>
   </div>
   <div>
@@ -327,13 +401,14 @@
     <div>
       <h3>Free Software Licenses</h3>
       <p>In the past decade, releasing one's own software as
-       open-source has become the standard practice. Most people who
-       release open-source software prefer to give a higher degree of
-       freedom to the software's users: they may choose a free
-       software license that enables this. Choosing between the myriad
-       ready-to-use licenses or writing a new license is a point of
-       concern for many developers who may not understand the rights
-       they are or are not granting their software's users.</p>
+       open-source has become the standard method of distribution.
+       Most people who release open-source software prefer to give a
+       higher degree of freedom to the software's users: they may
+       choose a free software license that enables this. Choosing
+       between the myriad ready-to-use licenses or writing a new
+       license is a point of concern for many developers who may not
+       understand the rights they are or are not granting their
+       software's users.</p>
     </div>
     <div>
       <h3>The Intel Management Engine and Free BIOSes</h3>
@@ -351,7 +426,7 @@
   <div>
     <p>This page is maintained
     by <a href="mailto:njd131@scarletmail.rutgers.edu">Nicholas Di
-	Girolamo.</a> (<a href="../resources/njd131.asc">Public Key</a>)
+	Girolamo</a> (<a href="../resources/njd131.asc">Public Key</a>).
     </p>
   </div>
 
@@ -367,7 +442,7 @@
   </a>
   <br />
   <a href="https://www.rutgers.edu">
-    <img src=../images/rutlogo.png" alt="Rutgers, The State University of New Jersey">
+    <img src=../images/rutlogo.png alt="Rutgers, The State University of New Jersey">
   </a>
 </img>
 </footer>
