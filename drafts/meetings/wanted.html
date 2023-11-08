@@ -167,20 +167,24 @@
       of <a href="https://en.wikipedia.org/wiki/Minix">Minix</a>,
       thought the monolithic kernel design was outdated even in 1991,
       while Linus Torvalds held to his opinion that a monolithic
-      kernel was more practical for production use. Some operating
-      systems, such as macOS with
+      kernel was more practical in production. Some operating systems,
+      such as macOS with
       the <a href="https://en.wikipedia.org/wiki/XNU">XNU kernel</a>
-      and Windows with the NT kernel, may try to bridge the gap
-      between these two designs by having a microkernel and a core set
-      of servers within kernel space.</p>
+      and Windows with the NT kernel, try to bridge the gap between
+      these two designs by having a microkernel and a core set of
+      servers within kernel space.</p>
     </div>
   </div>
   <div>
     <h2>System Administration</h2>
     <div>
       <h3>Package Management with Nix</h3>
-      <p>Nix is a package manager that is configured by a
-      functional programming language also called Nix.</p>
+      <p>Nix is a package manager that is configured by a functional
+      programming language also called Nix and is the central draw
+      to <a href="https://nixos.org">NixOS</a>, which is based around
+      the package manager. It has gained substantial attention in the
+      past few years because of its attention to reproducible builds,
+      robustness, extensibility, and portability.</p>
     </div>
     <div>
       <h3>Virtual Machines</h3>
@@ -260,7 +264,8 @@
       does. The on-line manual page format has been relatively
       standard and straightforward since its inception in the 1970s,
       and will be second nature to those familar with
-      the <tt>troff</tt> typesetting utility.</p>
+      the <a href="https://en.wikipedia.org/wiki/troff"><tt>troff</tt></a>
+      typesetting utility.</p>
     </div>
     <div>
       <h3>Volume Managers</h3>
@@ -278,21 +283,21 @@
       installations.</p>
     </div>
     <div>
-      <h3>SystemD</h3>
+      <h3>Systemd</h3>
       <p>Most popular modern Linux distributions use the init system
-	SystemD. It seeks to improve startup times, streamline system
+	Systemd. It seeks to improve startup times, streamline system
 	administration, and make running multiple instances of the
 	same <a href="https://en.wikipedia.org/wiki/Daemon_(computing)">daemon</a>
-	concurrently a simple task. SystemD is also the most
+	concurrently a simple task. Systemd is also the most
 	controversal part of modern GNU/Linux systems. Seeking to do
 	more than traditional init systems, it is seen as
 	overly-complicated and difficult to maintain, and in general
 	at odds with the principles that make the Unix-like family of
-	operating systems attractive. Furthermore, SystemD is not a
-	portable program because of its heavy use of the Linux kernel
-	API as opposed to POSIX, and may impose vendor lock-in to
-	GNU/Linux by having popular software like GNOME need it as a
-	dependency.</p>
+	operating systems attractive. Furthermore, Systemd is not a
+	portable program due to its complicated nature and its heavy
+	use of the Linux kernel API as opposed to POSIX, and may
+	impose vendor lock-in to the GNU/Linux ecosystem by having
+	popular software like GNOME need it as a dependency.</p>
     </div>
   </div>
   <div>
@@ -315,7 +320,10 @@
       subsequent free BSD projects which are active thirty years
       later, most
       notably <a href="https://www.freebsd.org">FreeBSD</a>, <a href="https://netbsd.org">NetBSD</a>,
-      and <a href="https://www.openbsd.org">OpenBSD</a>.</p>
+      and <a href="https://www.openbsd.org">OpenBSD</a>. Darwin, the
+      core of macOS, iOS, and iPad OS, also shares a substantial
+      amount of code with FreeBSD, and the two projects frequently
+      exchange code.</p>
     </div>
     <div>
       <h3>Windows Subsystem for Linux (WSL)</h3>
@@ -349,11 +357,10 @@
       high-end personal computers each offered their own variant of
       Unix, usually based on Version 7 Unix, System V Unix, or BSD.
       They also often had specialized microprocessors,
-      like <a href="https://en.wikipedia.org/wiki/SPARC">SPARC</a>, <a href="https://en.wikipedia.org/wiki/Power_ISA">POWER
-      and
-      PowerPC</a>, <a href="https://en.wikipedia.org/wiki/PA-RISC">PA-RISC</a>, <a href="https://en.wikipedia.org/wiki/DEC_Alpha">Alpha</a>,
+      like <a href="https://en.wikipedia.org/wiki/SPARC">SPARC</a>, <a href="https://en.wikipedia.org/wiki/Power_ISA">POWER</a>
+      and <a href="https://en.wikipedia.org/wiki/PowerPC">PowerPC</a>, <a href="https://en.wikipedia.org/wiki/PA-RISC">PA-RISC</a>, <a href="https://en.wikipedia.org/wiki/DEC_Alpha">Alpha</a>,
       and <a href="https://en.wikipedia.org/wiki/Itanium">Itanium</a>.
-      While this class of hardware was largely rendered obsolete by
+      While this class of hardware was largely rendered redundant by
       64-bit x86 workstations, the software that ran on them survives
       in the form
       of <a href="https://www.ibm.com/products/aix">AIX</a> from
@@ -391,6 +398,30 @@
       common goal of free BIOS projects is to disable this device.</p>
     </div>
   </div>
+  <div>
+    <h3>Big Tech and Free Software</h3>
+    <p>Free software has become increasingly preferred by developers
+      as it guarantees rights for themselves and their users. Despite
+      its legal nonprofit status, the
+      <a href="https://www.linuxfoundation.org/">Linux Foundation</a>
+      can be considered a commercial entity, emphasizing its corporate
+      members such as Microsoft, Google, and Amazon Web Services.
+      Their contributions to the free software ecosystem can be
+      considered beneficial to projects themselves, but free software
+      advocates are concerned that these large companies are using
+      free software out of economic incentive rather than as a more
+      ethical method of distribution of their products. Permissive
+      licenses such as
+      <a href="https://opensource.org/license/bsd-2-clause/">BSD</a>
+      and <a href="https://opensource.org/license/mit/">MIT</a> have
+      been similarly divisive because they do not require the parties
+      which modify the source code to publically publish their
+      changes, leading to situations where large projects do not
+      receive contributions that could have benefitted the entire
+      community had they not been integrated exclusively in a
+      proprietary fork.</p>
+  </div>
+  
   <br />
   <div>
     <p>This page is maintained
