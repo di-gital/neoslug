@@ -1,5 +1,10 @@
 #!/bin/sh
 
+usage() {
+    printf "./gensite.sh [-h] BUILD-DIRECTORY\n"
+    exit
+}
+
 write_header() {
     if [ ! -e "$OUTFILE" ]; then
 	mkdir -p $(dirname "$OUTFILE")
@@ -27,7 +32,30 @@ relative() {
     fi
 }
 
-cd ../drafts
+BUILD_DIR="../slug"
+SOURCE_DIR="../drafts"
+
+while getopts b:d:h opt; do
+    case $opt in
+	b) BUILD_DIR="$OPTARG";;
+	d) SOURCE_DIR="$OPTARG";;
+	h) usage;;
+      esac
+done
+
+if [ ! -d "$SOURCE_DIR" ]; then
+    printf "Source directory not found!\n"
+    exit 1
+fi
+
+if [ ! -e "$BUILD_DIR" ]; then
+    mkdir "$BUILD_DIR"
+elif [ ! -d "$BUILD_DIR" ]; then
+  printf "Specified build directory is not a directory. Exiting.\n"
+  exit 1
+fi
+
+cd "$SOURCE_DIR"
 
 for i in $(find . -type f); do
     DEPTH=$(echo $i | grep -o '/' | grep -c .)
@@ -35,9 +63,12 @@ for i in $(find . -type f); do
     IMAGES="$REL_PATH"images
     RESOURCES="$REL_PATH"resources
     INFILE="$i"
-    OUTFILE="../slug/$i"
+    OUTFILE="$BUILD_DIR/$i"
     
     write_header
     write_doc
     write_footer
 done
+
+cp -rp "../resources" "$BUILD_DIR"
+cp -rp "../images" "$BUILD_DIR"

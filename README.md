@@ -15,7 +15,9 @@ we impose the following requirements:
 
 ## Generating
 To generate the site from the script, run the script `gensite.sh` from
-the `scripts` directory. This does not copy the assets, which must be
-added in the `slug` directory manually.
+the `scripts` directory with the argument to a build directory. By
+default, it will be built to the directory "slug" under the root of
+the project itself.
+
 
 
