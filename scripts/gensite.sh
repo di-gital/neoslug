@@ -1,7 +1,7 @@
 #!/bin/sh
 
 usage() {
-    printf "./gensite.sh [-h] BUILD-DIRECTORY\n"
+    printf "./gensite.sh [-h] [-d DRAFTS] [-b BUILD]\n"
     exit
 }
 

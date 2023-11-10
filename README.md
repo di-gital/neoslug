@@ -13,11 +13,17 @@ we impose the following requirements:
 - Written in modern HTML and CSS
 - Friendly to as many browsers as possible, including text-based browsers
 
+## Expanding
+All new articles and changes to existing articles are to be done
+within the `drafts` directory. They are standard HTML files that only
+include the body.
+
 ## Generating
-To generate the site from the script, run the script `gensite.sh` from
-the `scripts` directory with the argument to a build directory. By
-default, it will be built to the directory "slug" under the root of
-the project itself.
+`cd scripts`
+`./gensite.sh [-h] [-d DRAFTS] [-b BUILD]`
 
-
+To generate the site, run the script `gensite.sh` from the `scripts`
+directory. By default, it will be built to the directory "slug" under
+the root of the project itself, but can be built from any source
+directory and built to any destination directory.
 
