@@ -1,5 +1,5 @@
 # NeoSLUG
-This is the repository for the [RU SLUG](https://slug.sinepost.us)
+This is the repository for the [RU SLUG](https://ruslug.org)
 website. As a reimplementation the original 2001 version of the site,
 it has been named "NeoSLUG."
 

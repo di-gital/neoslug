@@ -52,7 +52,7 @@ fi
 # then make it absolute. 
 case "$BUILD_DIR" in
     /*) ;;
-    *) BUILD_DIR="$(pwd)/$BUILD_DIR"; echo "$BUILD_DIR";;
+    *) BUILD_DIR="$(pwd)/$BUILD_DIR";; 
 esac	
 
 if [ ! -e "$BUILD_DIR" ]; then
