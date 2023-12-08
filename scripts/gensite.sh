@@ -77,5 +77,6 @@ for i in $(find . -type f); do
     write_footer
 done
 
+cp -rp "../images/favicon.ico" "$BUILD_DIR"
 cp -rp "../resources" "$BUILD_DIR"
 cp -rp "../images" "$BUILD_DIR"
