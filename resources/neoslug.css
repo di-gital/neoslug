@@ -1,3 +1,9 @@
+header img {
+    max-width: 573px;
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 95%;
