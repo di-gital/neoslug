@@ -19,11 +19,5 @@ within the `drafts` directory. They are standard HTML files that only
 include the body.
 
 ## Generating
-`cd scripts`
-`./gensite.sh [-h] [-d DRAFTS] [-b BUILD]`
-
-To generate the site, run the script `gensite.sh` from the `scripts`
-directory. By default, it will be built to the directory "slug" under
-the root of the project itself, but can be built from any source
-directory and built to any destination directory.
-
+From the root directory, run `make`. The build will be located in the
+directory `slug`.
