@@ -34,6 +34,6 @@ nav a {
     color: black;
 }
 
-
-
-
+header img {
+    max-width: 573px;
+}
