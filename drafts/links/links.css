@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-betwen;
+    gap: 20px 20px;
+    justify-content: center;
+}
+
+main h2 {
+    align: center;
+}
+
+main section {
+    background-color: #eaf2f8;
+    padding: 20px;
+}
