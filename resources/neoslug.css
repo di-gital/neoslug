@@ -1,3 +1,8 @@
+header img {
+    max-width: 573px;
+    height: auto;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 95%;
@@ -27,7 +32,4 @@ nav th {
 nav a {
     color: black;
 }
-
-
-
 

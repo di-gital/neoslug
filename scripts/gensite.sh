@@ -80,3 +80,5 @@ done
 cp -rp "../images/favicon.ico" "$BUILD_DIR"
 cp -rp "../resources" "$BUILD_DIR"
 cp -rp "../images" "$BUILD_DIR"
+
+touch "$BUILD_DIR"
