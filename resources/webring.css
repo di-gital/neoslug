@@ -1,0 +1,21 @@
+#webring a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  padding: 6px;
+}
+
+#webring a:hover {
+  background-color: gray;
+}
+
+#webring {
+  display: flex;
+  flex-wrap: flex;
+  background-color: black;
+  justify-content: center;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
