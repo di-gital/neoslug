@@ -11,11 +11,9 @@
 
 #webring {
   display: flex;
-  flex-wrap: flex;
+  flex-wrap: wrap;
   background-color: black;
   justify-content: center;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
