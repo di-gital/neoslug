@@ -1,0 +1,26 @@
+#logo {
+  color: black;
+  text-decoration: none;
+  font-variant: petite-caps;
+  font-family: serif;
+  & table { margin: auto; padding: 8px; }
+  & th { padding: 2px; }
+}
+
+#logotext {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
+  column-gap: 8px;
+  row-gap: 0px;
+  & #slug {
+    font-size: 70px;
+    font-weight: bolder;
+  }
+  & #ru {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
