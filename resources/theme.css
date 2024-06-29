@@ -1,0 +1,10 @@
+@media (prefers-color-scheme: dark) {
+  html {
+     background: #181818;
+     color: white;
+  }
+  #logotext {
+    color: white;
+  }
+}
+
