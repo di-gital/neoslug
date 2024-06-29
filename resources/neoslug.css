@@ -19,7 +19,7 @@ h1 {
 }
 
 nav {
-    background-color: #8fbaef; 
+    background-color: #CC0033; 
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -30,6 +30,6 @@ nav th {
 }
 
 nav a {
-    color: black;
+    color: white;
 }
 
